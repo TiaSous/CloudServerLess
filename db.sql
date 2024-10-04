@@ -2,6 +2,8 @@ DROP DATABASE IF EXISTS db_serverless;
 
 CREATE DATABASE db_serverless;
 
+USE db_serverless;
+
 CREATE TABLE t_users (
     user_id INT AUTO_INCREMENT PRIMARY KEY,
     username VARCHAR(50) NOT NULL,
@@ -18,3 +20,6 @@ CREATE TABLE t_messages (
     sent_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (user_id) REFERENCES t_users(user_id) ON DELETE CASCADE ON UPDATE CASCADE
 );
+
+INSERT INTO t_users (username, email, password) VALUES
+('johndoe', 'johndoe@example.com', 'password123');
