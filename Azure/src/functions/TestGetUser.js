@@ -3,11 +3,11 @@ const mysql = require('mysql2/promise');
 
 // configuration db
 const config = {
-  host: process.env["Host"],
+  host: process.env.Host,
   port: 3306,
-  user: process.env["User"],
-  password: process.env["Password"],
-  database: process.env["Database"],
+  user: process.env.User,
+  password: process.env.Password,
+  database: process.env.Database,
   connectTimeout: 30000,
 }
 
